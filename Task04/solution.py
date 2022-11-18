@@ -2,4 +2,6 @@
 
 from logic_rle import decode, encode
 
-print(decode(encode("аббвввггггддддд"))) # Должно вернуть строку в скобках :)
+
+print(encode('ааавввввгдддд'))
+print(decode(encode('ааавввввгдддд')))
