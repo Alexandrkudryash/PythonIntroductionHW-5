@@ -10,6 +10,7 @@
 # b) Подумайте как наделить бота ""интеллектом""
 # Входные и выходные данные хранятся в отдельных текстовых файлах.
 
+
 import random
 
 
@@ -77,11 +78,10 @@ def mode():
         mode_ = mode()
     return int(mode_)
 
-
 def game():
     mode_ = mode()
     max_, max_cnt = settings()
-    first_player, second_player = register() if mode_ else register(False)
+    first_player, second_player = register(True) if mode_ else register(False)
     current_player = (first_player, second_player)[random.randint(0, 1)]
     while max_ != 0:
         current_player = second_player if current_player == first_player else first_player
@@ -90,3 +90,5 @@ def game():
         print(f"Осталось: {max_}\n")
     #print(f"\033[32mПобедитель - {current_player}\033[0m")
     print(f"\033[Победитель - {current_player}\033[")
+
+
